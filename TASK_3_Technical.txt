@@ -1,0 +1,269 @@
+SPEECHIFY QA ASSESSMENT - TASK 3: TECHNICAL
+No internet. No AI. No notes.
+=======================================================
+
+SECTION A - API ESSENTIALS
+Answer in 1-2 sentences each.
+
+1. What is an API?
+
+2. What is the difference between a Request and a Response?
+
+3. What is JSON? Write a simple example of a valid JSON object
+   for a user profile containing id, name, and email.
+
+4. What is the difference between a query parameter and a path parameter?
+   Give one example URL for each.
+
+5. What is the difference between authentication and authorization?
+
+
+=======================================================
+SECTION B - API TESTING SCENARIOS
+These are mind-bending. Think carefully before answering.
+
+6. You send a POST request to create a new user.
+   The server returns 201 Created.
+   You then send a GET request to retrieve that user and get a 404.
+   What are three possible explanations and how do you investigate each one?
+
+7. You send a DELETE request to remove a document.
+   The server returns 200 OK.
+   You send a GET request for the same document and it still returns the data.
+   Is this a bug? Explain your reasoning and what you would investigate.
+
+8. You are testing a search API endpoint.
+   GET /search?query=hello returns results correctly.
+   GET /search?query=hello world returns a 400 error.
+   What is the likely cause and how do you fix the request?
+
+9. You test a login API with valid credentials and receive a 403.
+   You test with invalid credentials and receive a 200.
+   What does this tell you and what do you report?
+
+10. An API endpoint returns the correct data when you test it in Postman.
+    But the same endpoint fails when called from the web application.
+    List four possible causes and how you would isolate each one.
+
+11. You are testing a PATCH endpoint to update a user's email.
+    The server returns 200 OK but the email in the response body is the OLD email.
+    List four specific things you would investigate.
+
+12. A GET endpoint that retrieves a list of users is returning results in
+    a different order every time you call it.
+    Is this a bug? When would it be and when would it not be?
+    What would you recommend?
+
+13. You send an API request with an expired token.
+    You expect a 401 but receive a 200 with empty data instead.
+    What is the risk of this behavior and what do you report?
+
+14. You are testing a file upload API.
+    Small files under 1MB upload successfully.
+    Files over 5MB return a 500 error with no error message.
+    Files between 1MB and 5MB sometimes work and sometimes fail.
+    Walk through your full investigation and what you report.
+
+15. An API works correctly in the staging environment.
+    It fails with a 500 error in the production environment.
+    What are the most likely causes and how do you investigate?
+
+16. You notice an API endpoint is taking 8 seconds to respond.
+    The requirement says it should respond within 2 seconds.
+    How do you document this and what information do you include in the bug report?
+
+17. A developer tells you an API endpoint requires no authentication
+    because "it only returns public data."
+    What security test cases would you run against this endpoint?
+
+
+=======================================================
+SECTION C - WEB TESTING AND DEBUGGING
+This section mirrors real technical interview questions.
+Answer as specifically and technically as you can.
+
+18. A button on a web page does nothing when clicked.
+    Walk through your full debugging process step by step.
+    What tools do you open, what do you look for, and in what order?
+
+19. A web page loads but shows no data.
+    The page does not show an error message.
+    Walk through how you would debug this using only the browser.
+    Be specific about which browser tools you use and what you look for.
+
+20. What is the browser developer console?
+    Name three specific things you can identify from the console
+    when debugging a broken web feature.
+
+21. What is the Network tab in browser developer tools?
+    Describe how you would use it to debug a failed API call
+    from a web application.
+
+22. A web form submits successfully but the data does not appear
+    in the database. The server returns 200 OK.
+    List four places you would investigate and what you are looking for in each.
+
+23. What is the difference between a hard refresh and a normal refresh?
+    When would a hard refresh matter during testing?
+
+24. A feature works on Chrome but is broken on Safari.
+    Walk through your debugging approach step by step.
+    What are the most common causes of cross-browser issues?
+
+25. A web page works correctly when you are logged in but shows
+    broken layout when you are logged out.
+    What are the possible causes and how do you investigate?
+
+26. You open the browser console and see a CORS error.
+    What does this mean in plain English?
+    Is this a frontend issue or a backend issue?
+    What do you include in your bug report?
+
+27. A user reports that a feature is broken but you cannot reproduce it.
+    The user is on Windows Chrome and you are on Mac Chrome.
+    Walk through everything you would check to try to reproduce it.
+
+28. What is the difference between HTTP and HTTPS?
+    If a web app is sending login credentials over HTTP, what is the risk
+    and how do you document it as a bug?
+
+29. A web page is extremely slow to load.
+    Name five specific things you would check to identify the cause.
+    Be technical.
+
+30. You are testing a web app and you notice the page behaves differently
+    when you open it in an incognito window versus a normal window.
+    What does this tell you and what would you investigate?
+
+31. A dropdown menu on a web page works correctly with a mouse
+    but cannot be navigated using the keyboard.
+    What type of testing does this fall under?
+    Why does it matter and how do you report it?
+
+32. After a new feature is deployed, users report that a completely
+    unrelated feature has stopped working.
+    What type of testing would have caught this?
+    Walk through what you would do now.
+
+
+=======================================================
+SECTION D - PSEUDO-CODE
+Read the example template first. Then complete the three drills.
+
+-------------------------------------------------------
+EXAMPLE TEMPLATE - READ THIS FIRST
+-------------------------------------------------------
+
+This is the structure you should follow for all pseudo-code answers.
+It does not need to be real code. It needs to show clear logic.
+
+EXAMPLE: Validate a password field
+Rules:
+- Must be at least 8 characters
+- Must contain at least one number
+- Must contain at least one uppercase letter
+
+FUNCTION validatePassword(password):
+
+  IF length of password is less than 8:
+    RETURN "Error: Password must be at least 8 characters"
+
+  IF password does not contain any digit (0 through 9):
+    RETURN "Error: Password must contain at least one number"
+
+  IF password does not contain any uppercase letter (A through Z):
+    RETURN "Error: Password must contain at least one uppercase letter"
+
+  RETURN "Valid"
+
+Key rules for your answers:
+- One IF statement per rule
+- Each IF returns a SPECIFIC error message
+- Only return "Valid" at the very end after all checks pass
+- Never combine all rules into one IF statement
+-------------------------------------------------------
+
+DRILL 1 - EASY
+Write pseudo-code to validate a username field.
+Rules:
+- Must be between 3 and 20 characters
+- Cannot be empty
+- Return a specific error for each rule broken
+- Return "Valid" if all rules pass
+
+
+DRILL 2 - MEDIUM
+Write pseudo-code for a login attempt counter.
+Rules:
+- User gets 5 attempts to log in
+- Each failed attempt increments a counter
+- After 5 failed attempts return "Account locked"
+- If the user logs in successfully reset the counter and return "Login successful"
+- If attempts are between 1 and 4 return "X attempts remaining" with the correct number
+
+
+DRILL 3 - MEDIUM
+Write pseudo-code to validate an API response.
+The function receives a response object.
+It must check:
+- Status code is 200
+- Response body is not empty
+- Response body contains a field called "user"
+- The "user" field contains an "email" field
+- Return "PASS" if all checks pass
+- Return "FAIL: " followed by the specific check that failed
+
+
+=======================================================
+SECTION E - EDGE CASE AND ANALYTICAL THINKING
+
+33. List 10 edge cases you would test for a file upload feature.
+    The feature allows users to upload documents to Speechify.
+    Think about file types, sizes, names, network conditions, and user behavior.
+
+34. You are testing a "change password" feature.
+    The new password cannot be the same as the current password.
+    List all the test scenarios you would cover.
+    Aim for at least 10.
+
+35. A user reports that audio playback on Speechify sometimes plays
+    at the wrong speed. You cannot reproduce it consistently.
+    Walk through your full investigation approach.
+    What information do you gather, what do you test, and what do you report?
+
+36. You are testing a real-time feature where two users can edit
+    the same document at the same time.
+    List 8 specific test scenarios that could cause problems.
+
+37. A feature works perfectly in testing but breaks in production.
+    List 6 specific reasons why this could happen.
+    For each one explain how you would confirm it is the cause.
+
+38. You are testing a web app that has a session timeout feature.
+    The user should be logged out after 30 minutes of inactivity.
+    List all the test scenarios you would cover.
+    Aim for at least 8.
+
+39. List 8 security test cases you would run against any login page.
+    For each one explain what vulnerability you are testing for.
+
+40. A Speechify user reports that their document disappeared after
+    they refreshed the page while it was uploading.
+    List all the things you would investigate and the test cases
+    you would write to prevent this from happening again.
+
+41. You are asked to test a payment feature for the first time.
+    There are no test cards provided and no staging environment.
+    What do you do? Walk through your full approach.
+
+42. Final question.
+    You join a startup as the only QA engineer.
+    There are no existing test cases, no requirements documents,
+    and the team ships new features every week.
+    What do you do in week 1, week 2, and week 3?
+    Be specific and practical.
+
+
+=======================================================
+END OF TASK 3
+=======================================================

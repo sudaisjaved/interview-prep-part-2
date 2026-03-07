@@ -1,0 +1,166 @@
+SPEECHIFY QA ASSESSMENT - TASK 1: QA FUNDAMENTALS
+No internet. No AI. No notes.
+=======================================================
+
+SECTION A - FILL IN THE BLANK
+
+1. What type of testing is performed by end users or clients to validate
+   software meets business requirements before go-live?
+
+2. What term defines how badly a bug impacts the system?
+
+3. What term defines how urgently a bug needs to be fixed?
+
+4. Write the correct defect lifecycle in order:
+   New > ? > ? > Fixed > ? > Closed
+
+5. What type of test runs only critical paths to verify a build is
+   stable enough for further testing?
+
+6. What type of test is performed after a specific fix to verify that
+   fix works and nothing else broke?
+
+7. What type of test re-runs the full test suite after changes to
+   confirm nothing previously working has broken?
+
+8. What type of testing requires no knowledge of internal code?
+
+9. What type of testing requires knowledge of internal code?
+
+10. What analysis technique tests inputs at the exact boundaries
+    of a valid range?
+
+11. What does HTTP PUT do to a resource?
+
+12. What does HTTP PATCH do to a resource?
+
+13. What does REST stand for?
+
+14. What HTTP method is used to CREATE a new resource?
+
+15. What HTTP method is used to RETRIEVE data?
+
+
+=======================================================
+SECTION B - CORE STATUS CODES
+Write what each code means and one situation where you would see it.
+
+16. 200
+
+17. 401
+
+18. 403
+
+19. 404
+
+20. 500
+
+
+=======================================================
+SECTION C - SHORT ANSWER
+Answer in 2-4 sentences.
+
+21. What is the difference between Severity and Priority?
+    Give one example where they are split.
+
+22. Who performs UAT and why must it not be the development team?
+
+23. What is the difference between a Smoke test and a Sanity test?
+    When would you use each?
+
+24. What is the difference between a Smoke test and a Regression test?
+
+25. What is Boundary Value Analysis? Give a concrete example with numbers.
+
+26. What is Exploratory Testing and when would you use it?
+
+27. What is the difference between Verification and Validation?
+
+28. What is Equivalence Partitioning? Give a real example.
+
+29. What is a Test Plan and what does it typically contain?
+
+30. What is a Traceability Matrix and why is it useful?
+
+31. What is the difference between a test case and a test scenario?
+
+32. What is regression testing and when is it triggered?
+
+
+=======================================================
+SECTION D - PROFESSIONAL JUDGMENT
+Answer fully. These are evaluated on reasoning not just correctness.
+
+33. You discover a critical bug one hour before a scheduled release.
+    The bug causes the app to crash on file export.
+    Exports are used by 5% of users.
+    Walk through exactly what you do, who you contact, and what
+    recommendation you make to the team.
+
+34. A developer tells you "that is not a bug, that is expected behavior."
+    You disagree because the behavior does not match the requirements doc.
+    How do you handle this professionally?
+    What is your next step if they still disagree after you show them the doc?
+
+35. You are asked to test a new feature but there are no requirements
+    documents and the PM is unavailable.
+    What is your full approach from start to finish?
+
+36. You are three days into a two week testing cycle and you realize
+    the scope is too large to complete all test cases in time.
+    What do you do and who do you involve?
+
+37. Two critical bugs are assigned to you at the same time.
+    Both are marked High Priority.
+    How do you decide which one to work on first?
+
+38. You are the only QA engineer on the team.
+    A developer asks you to approve a release but you have not
+    finished testing all the features.
+    What do you do?
+
+39. You find a bug that you reported two weeks ago marked as Fixed.
+    You retest it and it is still happening.
+    What do you do?
+
+40. A new feature passes all your test cases but a real user reports
+    a bug in that same feature the day after release.
+    What does this tell you about your test cases and what do you do next?
+
+41. The PM asks you to skip regression testing because the release
+    deadline is tomorrow and the new feature looks fine.
+    How do you respond?
+
+42. You are testing a feature that works on Chrome but not on Firefox.
+    The developer says "we don't support Firefox."
+    There is nothing in the requirements about browser support.
+    How do you handle this?
+
+
+=======================================================
+SECTION E - BUG REPORTING
+
+43. Write a complete bug report for this scenario:
+
+    A user on Chrome tries to reset their password.
+    They click "Send Reset Email" and nothing happens.
+    No email is received. No error message is shown.
+    The button appears to do nothing.
+    The issue does not happen on Safari.
+
+    Use this exact structure:
+
+    Bug ID:
+    Title:
+    Environment:
+    Severity:
+    Priority:
+    Steps to Reproduce:
+    Expected Result:
+    Actual Result:
+    Attachments:
+
+
+=======================================================
+END OF TASK 1
+=======================================================

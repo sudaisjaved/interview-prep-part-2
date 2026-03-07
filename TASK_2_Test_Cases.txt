@@ -1,0 +1,87 @@
+SPEECHIFY QA ASSESSMENT - TASK 2: TEST CASE DESIGN
+No internet. No AI. No notes.
+=======================================================
+
+SCENARIO A - LOGIN PAGE
+
+You are testing the Login Page of a web application.
+
+PAGE ELEMENTS:
+- Email input field
+- Password input field
+- Login button
+- Forgot Password link
+- Error message area below the form
+
+ACCEPTANCE CRITERIA:
+- A registered user can log in with a valid email and correct password
+- Unregistered email returns: "Account not found"
+- Wrong password returns: "Incorrect password"
+- Empty fields on submit returns: "Please fill in all fields"
+- After 5 consecutive failed attempts the account locks for 10 minutes
+- Successful login redirects the user to their dashboard
+- Password field masks characters as the user types
+
+TASK A:
+Write 10 test cases for the Login Page.
+You must include:
+- At least 3 Positive test cases
+- At least 3 Negative test cases
+- At least 2 Edge cases
+- At least 1 Security test case
+- At least 1 Regression test case
+
+Use this format for every test case:
+
+TC ID:
+Title:
+Type: [Positive / Negative / Edge / Security / Regression]
+Precondition:
+Steps:
+Expected Result:
+
+-----------------------------------------
+Write your 10 test cases below:
+-----------------------------------------
+
+
+=======================================================
+
+SCENARIO B - SEARCH FEATURE
+
+You are testing a Search bar on the Speechify web app.
+Users can search for documents they have uploaded.
+
+PAGE ELEMENTS:
+- Search input field
+- Search button
+- Results list below the search bar
+- "No results found" message when nothing matches
+
+ACCEPTANCE CRITERIA:
+- Searching a valid document name returns matching results
+- Search is not case sensitive
+- Partial matches are returned (searching "rep" returns "report")
+- Searching with an empty field returns: "Please enter a search term"
+- Searching a term with no matches returns: "No results found"
+- Results appear within 2 seconds
+
+TASK B:
+Write 8 test cases for the Search feature.
+You must include:
+- At least 2 Positive test cases
+- At least 2 Negative test cases
+- At least 2 Edge cases
+- At least 1 Security test case
+- At least 1 Performance test case
+
+Use the same format as above.
+
+-----------------------------------------
+Write your 8 test cases below:
+-----------------------------------------
+
+
+=======================================================
+END OF TASK 2
+=======================================================
