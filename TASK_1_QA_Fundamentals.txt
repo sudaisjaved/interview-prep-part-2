@@ -2,7 +2,7 @@ SPEECHIFY QA ASSESSMENT - TASK 1: QA FUNDAMENTALS
 No internet. No AI. No notes.
 =======================================================
 
-SECTION A - FILL IN THE BLANK
+SECTION A - FILL IN THE BLANK -- Adding this
 
 1. What type of testing is performed by end users or clients to validate
    software meets business requirements before go-live?
