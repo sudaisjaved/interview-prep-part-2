@@ -2,58 +2,73 @@ SPEECHIFY QA ASSESSMENT - TASK 1: QA FUNDAMENTALS
 No internet. No AI. No notes.
 =======================================================
 
-SECTION A - FILL IN THE BLANK -- Adding this
+SECTION A - FILL IN THE BLANK -- 
 
 1. What type of testing is performed by end users or clients to validate
    software meets business requirements before go-live?
+It's UAT testing for verification of the business requirements before release
 
 2. What term defines how badly a bug impacts the system?
+Severity the term
 
 3. What term defines how urgently a bug needs to be fixed?
+Priority
 
 4. Write the correct defect lifecycle in order:
    New > ? > ? > Fixed > ? > Closed
+New -> open -> assigned -> fixed -> tested -> Closed
 
 5. What type of test runs only critical paths to verify a build is
    stable enough for further testing?
+Smoke testing
 
 6. What type of test is performed after a specific fix to verify that
    fix works and nothing else broke?
+Sanity testing
 
 7. What type of test re-runs the full test suite after changes to
    confirm nothing previously working has broken?
+Regression testing
 
 8. What type of testing requires no knowledge of internal code?
+Blackbox testing
 
 9. What type of testing requires knowledge of internal code?
+White box testing
 
 10. What analysis technique tests inputs at the exact boundaries
     of a valid range?
+Boundary testing
 
 11. What does HTTP PUT do to a resource?
+Edits the entire resource
 
 12. What does HTTP PATCH do to a resource?
+Edit part of the resource
 
 13. What does REST stand for?
+It's a type of architectural API Stands for representational state transfer
 
 14. What HTTP method is used to CREATE a new resource?
+Post request
 
 15. What HTTP method is used to RETRIEVE data?
+Request
 
 
 =======================================================
 SECTION B - CORE STATUS CODES
 Write what each code means and one situation where you would see it.
 
-16. 200
+16. 200 - Success
 
-17. 401
+17. 401 - Invalid 
 
-18. 403
+18. 403 - Validation issue.  
 
-19. 404
+19. 404 - Bad request
 
-20. 500
+20. 500 - Server failure
 
 
 =======================================================
@@ -62,29 +77,51 @@ Answer in 2-4 sentences.
 
 21. What is the difference between Severity and Priority?
     Give one example where they are split.
+Severity is how the bug impacts the system, for example; login button not functioning -- this is high severity, urgent priority
+Priority is the urgency to fix the bug, for example; The CEO's name is miss spelled on the website page, Low severity, High priority 
 
 22. Who performs UAT and why must it not be the development team?
+UAT is performed by the end user and the Cliets, developers don't test because Client can verify the business before release.
 
 23. What is the difference between a Smoke test and a Sanity test?
     When would you use each?
+Smoke testing is testing done to verify the basic functionality of the build. Starts at the begining of the testing phase.
+Sanity testing is testing done to verity the specfic fix that was implemented. When the fix was deployed to the build.
 
 24. What is the difference between a Smoke test and a Regression test?
+Smoke testing is testing done to make sure the basic funtionality is working in the new build
+vs
+Regression testing is testing done to make sure that new changes didn't break the existing change 
 
 25. What is Boundary Value Analysis? Give a concrete example with numbers.
+Boundry testing is testing the min and max values 
+Testing the password range for example; Password should be 8 char long -- testing will be done 0-1 char and 8-9 charater to ensure that the min and max rules are obyed. 
 
 26. What is Exploratory Testing and when would you use it?
+Exploratory testing is testing done when there is no knowlege of the buinses requirment or knowledge of the source code. 
+it's used when the requirments are unclear, so testing is done while features are listed down and bugs are flaged. 
 
 27. What is the difference between Verification and Validation?
+Verification is done to see if we are develping the product right 
+Verification is done to see if we are develping the righ product
 
 28. What is Equivalence Partitioning? Give a real example.
+This is grouping a range of inputs so not to test each input.
+Input range; 1-7 = fail 8-16= Pass 17-28= fail
+So the testing will be 3 - 12 - 22
 
 29. What is a Test Plan and what does it typically contain?
+Test plan contains the testing plan of the feature of product. 
 
 30. What is a Traceability Matrix and why is it useful?
+This is a document that contains the design, test cases and code.
 
 31. What is the difference between a test case and a test scenario?
+Test case is
 
 32. What is regression testing and when is it triggered?
+The new changes/fixes that effect the existing ones, it's triggered when a fix/change is pushed that would effect the existing feature.
+ 
 
 
 =======================================================
@@ -96,45 +133,71 @@ Answer fully. These are evaluated on reasoning not just correctness.
     Exports are used by 5% of users.
     Walk through exactly what you do, who you contact, and what
     recommendation you make to the team.
+The bug will be flag with a full report for the PM with the Severity and the Priority 
+It will also include the steps to reproduce so that the dev team can fix it
+The dev will be contacted first and then PM to notify.
+After the fix is completed, to make sure that this doesn't repeat there would be a cause analysis (personal)
 
 34. A developer tells you "that is not a bug, that is expected behavior."
     You disagree because the behavior does not match the requirements doc.
     How do you handle this professionally?
     What is your next step if they still disagree after you show them the doc?
+I would get the PM invloved and provide the reproducable steps 
+Siting the requirment doc missmatch and behaviouly issue of the bug
+
 
 35. You are asked to test a new feature but there are no requirements
     documents and the PM is unavailable.
     What is your full approach from start to finish?
+I would conduct the exploritory testing, then assess the requirment and if any unexpected behaviours
+A report would be made and sent to the PM to make sure that i am on the correct path
 
 36. You are three days into a two week testing cycle and you realize
     the scope is too large to complete all test cases in time.
     What do you do and who do you involve?
+I would note down the scope of the feature and make it into a report 
+I would then invlove the PM and inform them on the matter, citing the scope and the timeline crunch 
+I would also cite the quality of testing that wouldn't be done because of rushing it. 
+also suggesting alternatives, where releasing the project into increments if the priority is urgent. 
+
 
 37. Two critical bugs are assigned to you at the same time.
     Both are marked High Priority.
     How do you decide which one to work on first?
+Looking at the sevrity of the bugs, since the priority is the same. 
+
 
 38. You are the only QA engineer on the team.
     A developer asks you to approve a release but you have not
     finished testing all the features.
     What do you do?
+I would make sure that they know that the testing is not done and that i am not able to approve release because testing is not completed. 
+
 
 39. You find a bug that you reported two weeks ago marked as Fixed.
     You retest it and it is still happening.
     What do you do?
+i would reopen and reassign the bugs and mention to the dev team that this has not been fixed and that it was reopned
 
 40. A new feature passes all your test cases but a real user reports
     a bug in that same feature the day after release.
     What does this tell you about your test cases and what do you do next?
+based on the kind of bug, i would shift the test cases flow and how the testing is conducted. 
+When the bug is reported, the bug would then be flaged and prioritized based on the severity it would be a go/no go on release with the permission of the PM
 
 41. The PM asks you to skip regression testing because the release
     deadline is tomorrow and the new feature looks fine.
     How do you respond?
+I would cite the importance of the user experience and also make sure to let him know about the important of testing to make fully sure that the feature is working. 
+
 
 42. You are testing a feature that works on Chrome but not on Firefox.
     The developer says "we don't support Firefox."
     There is nothing in the requirements about browser support.
     How do you handle this?
+I would make sure the the PM knows about the broswer issue, making sure that this is flaged so that it can be handled in the future. 
+
+
 
 
 =======================================================
