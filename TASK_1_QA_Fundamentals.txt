@@ -213,15 +213,15 @@ SECTION E - BUG REPORTING
 
     Use this exact structure:
 
-    Bug ID:
-    Title:
-    Environment:
-    Severity:
-    Priority:
-    Steps to Reproduce:
-    Expected Result:
-    Actual Result:
-    Attachments:
+    Bug ID: 1 
+    Title: User is not prompted with an error message when they press on "Send Reset Email" on Chrome, not reproduceable on Safari
+    Environment: Chrome
+    Severity: High
+    Priority: Critical
+    Steps to Reproduce: Precondition - User is on chrome browswer 1; User presses "Send reset password" 
+    Expected Result: The user should be able to see a message saying "Email sent" or an error message if the email is wrong 
+    Actual Result: The user doesn't recieve the emial nor do they see any error message.
+    Attachments: Screen shots and or screen recording of the incident
 
 
 =======================================================
