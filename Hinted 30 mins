@@ -1,0 +1,116 @@
+FOCUSED DRILL - 30 MINUTES
+Target: Defect Lifecycle, Status Codes, API Scenarios, Leaving Nothing Blank
+=======================================================
+
+PART 1 - MEMORIZATION (5 mins)
+
+1. Write the correct defect lifecycle in order:
+   New > ? > ? > Fixed > ? > Closed
+   New -> Open -> Assigned -> Fixed -> Retested -> Closed.
+
+2. What does each status code mean?
+   401 = Forbidden 
+   403 = 
+   404 = bad request
+   500 =
+
+3. What is the difference between POST, PUT and PATCH?
+   POST = Adding new information to the resource
+   PUT = Editing the whole of the information in the resource
+   PATCH = Editing part of the information in the resource
+
+4. Is a CORS error a frontend or backend issue? Why?
+CORS is a frontend issue, where the API is responding correctly but the frontend blocks the request becasue of missing headers, token etc.
+
+
+=======================================================
+PART 2 - API SCENARIOS (15 mins)
+Write something for every single question. No blanks allowed.
+
+5. You send a POST request to create a new user.
+   The server returns 201 Created.
+   You then send a GET request to retrieve that user and get a 404.
+   Give THREE possible explanations.
+   When POST request that was send didn't have the proper response body. 
+   
+
+6. You send a DELETE request to remove a document.
+   The server returns 200 OK.
+   You send a GET request for the same document and it still returns data.
+   Is this a bug? Explain why or why not.
+   Not a bug, rather the data was soft deleted, where the data is still present in the backend, This can be handled better
+
+7. You are testing a search API.
+   GET /search?query=hello works fine.
+   GET /search?query=hello world returns a 400 error.
+   What is the cause and how do you fix the request?
+   becuase hello world doesn;t exist?
+   
+
+8. You test a login API with valid credentials and receive a 403.
+   You test with invalid credentials and receive a 200.
+   What does this tell you and what do you report?
+  that the API validation is not properly done in the backend. "API validation miss match"
+  
+9. An API works correctly in Postman but fails when called
+   from the web application.
+   Give FOUR possible causes.
+   The Headers, the token, the response body.
+
+10. You send a PATCH request to update a user email.
+    Server returns 200 OK but the response shows the OLD email.
+    Give FOUR things you would investigate.
+    The response body when the Patch request was sent, because it could be the wrong syntax
+    
+
+11. You send an API request with an expired token.
+    You expect a 401 but receive a 200 with empty data.
+    What is the security risk and what do you report?
+    The validation that in place needs to be updated. 
+    
+
+12. An API works in staging but returns 500 in production.
+    Give FOUR possible reasons why.
+the header, token, response body could be on set for staging. 
+
+=======================================================
+PART 3 - WEB DEBUGGING (10 mins)
+Write something for every question. No blanks allowed.
+
+13. A button does nothing when clicked.
+    Name the FIRST tool you open and the FIRST thing you look for.
+    The inspect tab, the API reqest to make sure that if anything is being sent out or not.
+
+14. A page loads but shows no data and no error message.
+    Walk through your debug steps using only the browser.
+    The network tab, that will allow me to check the JSON 
+    To check if the API is responding to the request
+    If the API request is taking too long to resolve causing it to lose connection.
+
+15. You open the browser console and see a CORS error.
+    What does it mean in plain English?
+    Frontend or backend issue?
+    What do you put in the bug report?
+    it's a front end issue that is caused by outdated information that is passed in the request, header, token, response body
+
+16. A feature works on Chrome but breaks on Safari.
+    Name THREE common causes of cross browser issues.
+    The framework is differnt 
+    How the page responds to JS is different
+    
+
+17. A page behaves differently in incognito vs normal browser.
+    What does this tell you?
+    What do you investigate?
+    In incognito the cookies and the cache is not carried over that allows the page to behavie differently
+
+18. After a new feature is deployed an unrelated feature breaks.
+    What type of testing would have caught this?
+    What do you do right now?
+    regression testing would have caught this
+    Create a bug report that will allow me to get the steps in so that the dev is able to fix the issue
+    and to make sure that this doesn't happen again
+
+=======================================================
+END OF DRILL
+=======================================================
